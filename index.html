@@ -3,7 +3,8 @@
     <head> <!-- informacion de la pagina etiqueta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><Curriculum Vitae></title>
+        <title>Curriculum Vitae</title>
+        <link rel="stylesheet" href="/Frontend/css/index.css"> <!-- enlace a un archivo css externo -->    
     </head>
     <!-- padding define el espacio entre el contenido y el borde padding-top, padding-right, padding-bottom, padding-left -->
     <body >
@@ -13,9 +14,9 @@
         <h4>Titulo de tamaño H4</h4> 
         <h5>Titulo de tamaño H5</h5> 
         
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <img src="https://wallpapers.com/images/hd/dark-souls-3-knight-the-ashen-one-py4bbh481olilohy.jpg" alt="Dark Souls 3" style="background-size: 800px 600px;">
-        <table>
+        <p>"Lorem ipsum <strong> dolor </strong> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <img src="https://wallpapers.com/images/hd/dark-souls-3-knight-the-ashen-one-py4bbh481olilohy.jpg" alt="Dark Souls 3" width="500" height="300">
+        <table style="width: 100%;border: 1px solid black;">
             <tr>
                 <td style="border:solid black ;">XD</td>
                 <td style="border:solid black ;">XD</td>
@@ -24,19 +25,35 @@
                 <td style="border:solid black ;">XD</td>      
             </tr> 
             <tr>
-                <td style="border:solid black ;">XD</td>
+                <td style="border:solid black ;"colspan="5">XD</td>
                 <td style="border:solid black ;">XD</td>
                 <td style="border:solid black ;">XD</td>
                 <td style="border:solid black ;">XD</td>
                 <td style="border:solid black ;">XD</td>      
             </tr>
         </table>
-        <video width="auto" height="auto" controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
+       
+        <div style="width: 100%; height: 200px;"></div>
+            <div style="width: 100%; height: 200px;">
+            <div>
+                <ul style="list-style-type: square;">
+                    <li>Lista 1</li>
+                    <li>Lista 2</li>
+                    <li>Lista 3</li>
+                    <li>Lista 4</li>
+                    <li>Lista 5</li>
+                </ul>
+            </div>
 
-        <input type="text" placeholder="Escribe tu nombre">
-
-
+            <div>
+                <ol style="list-style-type: upper-roman;">
+                    <li>Lista 1</li>
+                    <li>Lista 2</li>
+                    <li>Lista 3</li>
+                    <li>Lista 4</li>
+                    <li>Lista 5</li>
+                </ol>
+            </div>
+        
     </body>
 </html> 
