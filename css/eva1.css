@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(17, 229, 158);
+}
+p{
+    font-family:monospace; 
+}
+#parrafo {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(229, 24, 17);
+}
+#banner_superior{
+    border: 10px solid black;
+    display: flex;
+    background-color: rgb(54, 243, 48);
+    
+}
+
+.banner_superior{
+    border:1px solid black;
+    display: flex;
+    background-color: rgb(54, 243, 48);
+    padding: 10px;
+}
+
+#logo{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 50%;
+}
