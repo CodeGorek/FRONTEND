@@ -1,29 +1,59 @@
 body{
-    background-color: rgb(17, 229, 158);
+    background-color: rgb(182, 243, 235);
 }
+
 p{
-    font-family:monospace; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#parrafo {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(229, 24, 17);
-}
+
 #banner_superior{
-    border: 10px solid black;
-    display: flex;
-    background-color: rgb(54, 243, 48);
-    
+    border: 3px solid black;
+    display: inline-flex;
+    padding: 10px;
+    width: 100% ;
+}
+
+#contenedor_principal{
+    width: 100%;
+}
+
+#pie_pagina{
+    width: 100%;
+}
+
+#parrafo_prueba{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
 }
 
 .banner_superior{
-    border:1px solid black;
-    display: flex;
-    background-color: rgb(54, 243, 48);
-    padding: 10px;
+    border: 2px solid black;
+    /* border-radius: 25px; */
+    display: inline-flex;
 }
 
-#logo{
-    display: flex;
-    border: 2px solid black;
-    border-radius: 50%;
+#pagina_completa{
+    display: inline-block;
+}
+
+#imagen_superior{
+    width: 200px;
+    height: 200px;
+    border-radius:50%; 
+    border:2px solid black
+}
+
+#superior_derecho{
+    padding-left: 25px;
+}
+
+#principal_izquierda{
+    width: 25%;
+}
+#pie_pagina{
+    display: inline-flex;
+}
+
+.div_pie_pagina{
+    margin: auto;
 }
