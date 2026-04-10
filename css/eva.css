@@ -1,0 +1,181 @@
+:root {
+    --bg-color: #1a1b26;      /* Fondo oscuro profundo */
+    --sidebar-bg: #24283b;   /* Sidebar un poco más claro */
+    --text-main: #c0caf5;    /* Texto principal azulado claro */
+    --accent: #7aa2f7;       /* Color de acento para títulos */
+    --border-color: #414868; /* Color de las líneas divisorias */
+}
+
+/* Elimina márgenes por defecto y ocupa el 100% */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+.cv-container {
+    display: flex;
+    min-height: 100vh; /* Ocupa al menos el alto total de la pantalla */
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+.sidebar {
+    width: 300px; /* Ancho fijo para el lateral */
+    background-color: var(--sidebar-bg);
+    padding: 40px 25px;
+    border-right: 1px solid var(--border-color);
+}
+
+.main-content {
+    flex: 1; /* Ocupa todo el espacio restante */
+    background-color: var(--bg-color);
+    padding: 60px 50px;
+}
+
+/* Estilo de la Foto */
+.foto-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    border-radius: 50%; /* Foto circular */
+    overflow: hidden;
+    border: 3px solid var(--accent);
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Títulos y Secciones */
+h1, h2, h3 {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 { font-size: 2.2rem; margin-bottom: 10px; }
+h2 { border-bottom: 2px solid var(--border-color); padding-bottom: 5px; margin-top: 40px; }
+
+ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+li { margin-bottom: 8px; }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 25px 0;
+}
+.ant_laborales {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--text-main);
+}
+.social-footer {
+    width: 100%;
+    max-width: 1100px; /* Para que coincida con el ancho de tu CV */
+    margin: 20px auto; /* Lo separa del CV y lo centra */
+    padding: 30px 0;
+    background-color: var(--sidebar-bg); /* Usamos el mismo color del sidebar */
+    text-align: center;
+    border-top: 2px solid var(--accent); /* Una línea de color arriba para que resalte */
+    border-radius: 0 0 10px 10px; /* Redondea solo las esquinas de abajo */
+}
+
+.social-footer h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre los links */
+}
+
+.social-icons a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.social-icons a:hover {
+    color: var(--accent); /* Cambia de color cuando pasas el puntero */
+    text-decoration: underline;
+}
+.sidebar section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none; /* Quitamos los puntos para que sea más limpio en el lateral */
+    padding-left: 0;
+}
+
+.sidebar li {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+/* Opcional: Estilo para resaltar el idioma */
+.sidebar strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+/* Estilos para la sección de Idiomas */
+.idiomas-seccion {
+    margin-bottom: 20px;
+}
+
+.idioma-item {
+    margin-bottom: 15px; /* Espacio entre cada idioma */
+}
+
+.idioma-info {
+    display: flex;
+    justify-content: space-between; /* Nombre a la izquierda, nivel a la derecha */
+    align-items: center;
+    margin-bottom: 5px; /* Espacio antes de la barra */
+    font-size: 0.9rem;
+}
+
+.idioma-nombre {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.idioma-nivel {
+    color: var(--text-main);
+    font-size: 0.8rem;
+    opacity: 0.8; /* Un poco más tenue */
+}
+
+/* El fondo de la barra (Gris Oscuro) */
+.barra-contenedor {
+    width: 100%;
+    height: 6px; /* Grosor de la barra */
+    background-color: var(--border-color); /* Usamos el color de los bordes para el fondo */
+    border-radius: 3px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el progreso no se salga */
+}
+
+/* El progreso de la barra (Azul Acento) */
+.barra-progreso {
+    height: 100%;
+    background-color: var(--accent); /* Tu color de acento principal */
+    border-radius: 3px; /* También redondeado */
+    transition: width 0.5s ease; /* Pequeño efecto suave al cargar */
+}
