@@ -1,181 +1,166 @@
 :root {
-    --bg-color: #1a1b26;      /* Fondo oscuro profundo */
-    --sidebar-bg: #24283b;   /* Sidebar un poco más claro */
-    --text-main: #c0caf5;    /* Texto principal azulado claro */
-    --accent: #7aa2f7;       /* Color de acento para títulos */
-    --border-color: #414868; /* Color de las líneas divisorias */
+    --bg-color: #1a1b26;
+    --sidebar-bg: #24283b;
+    --text-main: #c0caf5;
+    --accent: #7aa2f7;
+    --border-color: #414868;
 }
 
-/* Elimina márgenes por defecto y ocupa el 100% */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
+body, html { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: #0f1014; 
+    color: var(--text-main); 
 }
 
-.cv-container {
-    display: flex;
-    min-height: 100vh; /* Ocupa al menos el alto total de la pantalla */
-    max-width: 1100px;
-    margin: 0 auto;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+.cv-container { 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    background-color: var(--bg-color); 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8); 
 }
 
-.sidebar {
-    width: 300px; /* Ancho fijo para el lateral */
-    background-color: var(--sidebar-bg);
-    padding: 40px 25px;
-    border-right: 1px solid var(--border-color);
+.cv-header { 
+    display: flex; 
+    align-items: center; 
+    padding: 30px 50px; 
+    background-color: var(--sidebar-bg); 
+    border-bottom: 3px solid var(--accent);
 }
 
-.main-content {
-    flex: 1; /* Ocupa todo el espacio restante */
-    background-color: var(--bg-color);
-    padding: 60px 50px;
+.foto-container { 
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 3px solid var(--accent); 
+    flex-shrink: 0; 
+}
+.foto-container img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit:cover; 
+}
+.header-text { 
+    margin-left: 125px; 
+}
+.header-text h1 { 
+    margin: 0; 
+    font-size: 2.2rem; 
+    color: var(--accent); 
 }
 
-/* Estilo de la Foto */
-.foto-container {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 30px;
-    border-radius: 50%; /* Foto circular */
-    overflow: hidden;
-    border: 3px solid var(--accent);
+.cv-body { 
+    display: flex; 
+}
+.sidebar { 
+    width: 280px; 
+    background-color: var(--sidebar-bg); 
+    padding: 30px; 
+    border-right: 1px solid var(--border-color); 
+}
+.main-content { 
+    flex: 1; 
+    padding: 40px; 
 }
 
-.foto-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* ESTILOS CERTIFICADOS EN SIDEBAR */
+.cert-sidebar { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
 }
-
-/* Títulos y Secciones */
-h1, h2, h3 {
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h1 { font-size: 2.2rem; margin-bottom: 10px; }
-h2 { border-bottom: 2px solid var(--border-color); padding-bottom: 5px; margin-top: 40px; }
-
-ul {
-    padding-left: 20px;
-    list-style-type: square;
-}
-
-li { margin-bottom: 8px; }
-
-hr {
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 25px 0;
-}
-.ant_laborales {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--text-main);
-}
-.social-footer {
-    width: 100%;
-    max-width: 1100px; /* Para que coincida con el ancho de tu CV */
-    margin: 20px auto; /* Lo separa del CV y lo centra */
-    padding: 30px 0;
-    background-color: var(--sidebar-bg); /* Usamos el mismo color del sidebar */
-    text-align: center;
-    border-top: 2px solid var(--accent); /* Una línea de color arriba para que resalte */
-    border-radius: 0 0 10px 10px; /* Redondea solo las esquinas de abajo */
-}
-
-.social-footer h3 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Espacio entre los links */
-}
-
-.social-icons a {
+.cert-link {
     color: var(--text-main);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
+    font-size: 0.85rem;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #16161e;
+    transition: 0.3s;
+}
+.cert-link:hover { 
+    border-color: var(--accent); 
+    color: var(--accent); 
+}
+.cert-link i { 
+    margin-right: 8px; 
 }
 
-.social-icons a:hover {
-    color: var(--accent); /* Cambia de color cuando pasas el puntero */
-    text-decoration: underline;
+/* OTROS ELEMENTOS */
+h2, h3 { 
+    color: var(--accent); 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
 }
-.sidebar section h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.sidebar ul {
-    list-style: none; /* Quitamos los puntos para que sea más limpio en el lateral */
-    padding-left: 0;
+h2 { 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 10px; 
+    margin-top: 30px; 
 }
 
-.sidebar li {
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-    color: var(--text-main);
+.lista-limpia { 
+    list-style: none; 
+    padding: 0; 
+}
+.lista-limpia li { 
+    margin-bottom: 8px; 
+    font-size: 0.9rem; 
+}
+.experiencia { 
+    margin-bottom: 15px; 
+    line-height: 1.6; 
 }
 
-/* Opcional: Estilo para resaltar el idioma */
-.sidebar strong {
-    color: var(--accent);
-    font-weight: 600;
+.idioma-item { 
+    margin-bottom: 15px; 
 }
-/* Estilos para la sección de Idiomas */
-.idiomas-seccion {
-    margin-bottom: 20px;
+.idioma-header { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 0.8rem; 
+    margin-bottom: 4px; 
 }
-
-.idioma-item {
-    margin-bottom: 15px; /* Espacio entre cada idioma */
+.barra-contenedor { 
+    width: 100%; 
+    height: 6px; 
+    background: var(--border-color); 
+    border-radius: 3px; 
 }
-
-.idioma-info {
-    display: flex;
-    justify-content: space-between; /* Nombre a la izquierda, nivel a la derecha */
-    align-items: center;
-    margin-bottom: 5px; /* Espacio antes de la barra */
-    font-size: 0.9rem;
-}
-
-.idioma-nombre {
-    color: var(--text-main);
-    font-weight: 600;
+.barra-progreso { 
+    height: 100%; 
+    background: var(--accent); 
+    border-radius: 3px; 
 }
 
-.idioma-nivel {
-    color: var(--text-main);
-    font-size: 0.8rem;
-    opacity: 0.8; /* Un poco más tenue */
-}
 
-/* El fondo de la barra (Gris Oscuro) */
-.barra-contenedor {
-    width: 100%;
-    height: 6px; /* Grosor de la barra */
-    background-color: var(--border-color); /* Usamos el color de los bordes para el fondo */
-    border-radius: 3px; /* Bordes redondeados */
-    overflow: hidden; /* Para que el progreso no se salga */
+.social-footer { 
+    background: var(--sidebar-bg); 
+    padding: 20px; 
+    border-top: 2px solid var(--accent); 
+    text-align: center; 
 }
-
-/* El progreso de la barra (Azul Acento) */
-.barra-progreso {
-    height: 100%;
-    background-color: var(--accent); /* Tu color de acento principal */
-    border-radius: 3px; /* También redondeado */
-    transition: width 0.5s ease; /* Pequeño efecto suave al cargar */
+.social-grid { 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    font-size: 0.9rem; 
+}
+.social-grid a { 
+    color: var(--text-main); 
+    text-decoration: none; 
+}
+hr { 
+    border: 0; 
+    border-top: 1px solid var(--border-color); 
+    margin: 20px 0; 
+}
+.p-personal p { 
+    text-align: justify;
+    line-height: 1.6; 
+    font-size: 0.95rem; 
 }
