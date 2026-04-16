@@ -1,8 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 :root {
     --bg-color: #1a1b26;
     --sidebar-bg: #24283b;
-    --text-main: #c0caf5;
-    --accent: #7aa2f7;
+    --text-main: #ff0000;
+    --accent: #00ffc8;
     --border-color: #414868;
 }
 
@@ -144,15 +151,39 @@ h2 {
     border-top: 2px solid var(--accent); 
     text-align: center; 
 }
+
 .social-grid { 
     display: flex; 
     justify-content: center; 
+    align-items: center;
     gap: 30px; 
     font-size: 0.9rem; 
 }
+
+/* Estilo base de los enlaces */
 .social-grid a { 
     color: var(--text-main); 
     text-decoration: none; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.social-grid a:hover { 
+    color: var(--accent);           
+    transform: translateY(-3px);    
+    text-shadow: 0 0 10px rgba(122, 162, 247, 0.6);
+    -webkit-transform: translateY(-3px); 
+    -ms-transform: translateY(-3px);
+}
+
+/* Efecto opcional: el icono gira un poquito al pasar el mouse */
+.social-grid a:hover i {
+    transform: rotate(15deg);
 }
 hr { 
     border: 0; 
@@ -161,6 +192,10 @@ hr {
 }
 .p-personal p { 
     text-align: justify;
-    line-height: 1.6; 
+    text-justify: inter-word;
+    line-height: 1.7; 
     font-size: 0.95rem; 
+    word-break:break-word;
 }
+
+

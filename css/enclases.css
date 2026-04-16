@@ -1,14 +1,18 @@
 body{
-    background-color: rgb(182, 243, 235);
+    background-color: antiquewhite;
 }
 
 p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.imagen_superior{
+    opacity: 100%;
+}
+
 #banner_superior{
-    border:0svh solid black;
-    display:inline-flex;
+    border: 1px solid black;
+    display: inline-flex;
     padding: 10px;
     width: 100% ;
 }
@@ -21,14 +25,13 @@ p{
     width: 100%;
 }
 
-.Habilidades_blandas{
+#parrafo_prueba{
     font-family: 'Times New Roman', Times, serif;
     color: blue;
 }
 
 .banner_superior{
     border: 1px solid black;
-    
     /* border-radius: 25px; */
     display: inline-flex;
 }
@@ -37,11 +40,10 @@ p{
     display: inline-block;
 }
 
-.imagen_superior{
+#imagen_superior{
     width: 200px;
     height: 200px;
-    border-radius:50%; 
-    border:2px solid black
+    border-radius: 50%;
 }
 
 #superior_derecho{
@@ -51,9 +53,9 @@ p{
 #principal_izquierda{
     width: 25%;
 }
-.Habilidades_academicas{
-    font-family: 'Times New Roman', Times, serif;
-    color: red;
+
+#principal_derecha{
+    padding: 5px;
 }
 
 #pie_pagina{
@@ -61,20 +63,14 @@ p{
 }
 
 .div_pie_pagina{
-    
-    display: inline-flex;
+    margin: auto;
+    padding: 15px;
 }
 
-.button_pie{
-    background-color: rgb(54, 255, 64);
-    color: rgb(7, 7, 7);
-    border-radius: 45px;
-    border: 1px solid black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+.button{
+    padding: 5px;
+    border-color: brown;
+    border-radius: 50%;
+    display: block;
+    background-color: aqua;
 }
