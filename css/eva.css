@@ -181,7 +181,7 @@ h2 {
     -ms-transform: translateY(-3px);
 }
 
-/* Efecto opcional: el icono gira un poquito al pasar el mouse */
+/* icono gira un poquito al pasar el mouse */
 .social-grid a:hover i {
     transform: rotate(15deg);
 }
